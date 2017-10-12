@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "MEAN server",
+  "scripts": {
+    "grunt": "grunt",
+    "start": "node ./bin/www",
+    "dev": "concurrently \"npm start\" \"tsc --watch \" "
+  },
+  "author": "jsaiz",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.4",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ts": "^6.0.0-beta.16",
+    "grunt-tslint": "^5.0.1",
+    "mongoose": "^4.8.1",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.30",
+    "typings": "^2.1.1"
+  }
+}
