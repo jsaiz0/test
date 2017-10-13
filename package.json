@@ -3,26 +3,29 @@
   "version": "1.0.0",
   "description": "MEAN server",
   "scripts": {
-    "grunt": "grunt",
+    "compile": "tsc",
+    "watch": "tsc --watch",
+    "mongo": "mongod",
     "start": "node ./bin/www",
-    "dev": "concurrently \"npm start\" \"tsc --watch \" "
+    "dev": "npm run compile && npm run start & npm run watch",
+    "prod": "npm run compile && npm run start"    
   },
   "author": "jsaiz",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.15.4",
+    "concurrently": "^3.5.0",
+    "express": "^4.16.2",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-ts": "^6.0.0-beta.16",
     "grunt-tslint": "^5.0.1",
-    "mongoose": "^4.8.1",
+    "mongoose": "^4.12.1",
     "tslint": "^5.7.0",
-    "typescript": "^2.5.2"
+    "typescript": "^2.5.3"
   },
   "devDependencies": {
-    "@types/node": "^8.0.30",
-    "typings": "^2.1.1"
+    "@types/node": "^8.0.30"
   }
 }
