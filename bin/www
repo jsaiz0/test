@@ -3,7 +3,6 @@
 
 //module dependencies.
 var app = require("../dist/app");
-var db = require("../dist/db/db");
 var debug = require("debug")("express:server");
 var http = require("http");
 
@@ -15,16 +14,7 @@ app.set("port", port);
 var server = http.createServer(app);
 
 //listen on provided ports
-server.listen(port/*, () => {
-    mongoose.connect('mongodb://localhost:27017/pruebas', (err, res) => {
-        if (err) {
-            throw (err);
-        } else {
-            console.log("mongodb correct");
-
-        }
-    });
-}*/);
+server.listen(port);
 
 //add error handler
 server.on("error", onError);
