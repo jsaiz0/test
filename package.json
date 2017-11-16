@@ -8,7 +8,7 @@
     "mongo": "mongod",
     "start": "node ./bin/www",
     "dev": "npm run compile && npm run start & npm run watch",
-    "prod": "npm run compile && npm run start"    
+    "prod": "npm run compile && npm run start"
   },
   "author": "jsaiz",
   "license": "MIT",
@@ -19,13 +19,13 @@
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-ts": "^6.0.0-beta.16",
+    "grunt-ts": "^6.0.0-beta.17",
     "grunt-tslint": "^5.0.1",
-    "mongoose": "^4.12.1",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.3"
+    "mongoose": "^4.13.3",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1"
   },
   "devDependencies": {
-    "@types/node": "^8.0.30"
+    "@types/node": "^8.0.53"
   }
 }
