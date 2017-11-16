@@ -1,0 +1,22 @@
+<mat-toolbar>
+  <!-- MENU -->
+  <div class="toolbar-menu-icon">
+    <mat-icon [matMenuTriggerFor]="appMenu">
+      menu
+    </mat-icon>
+  </div>
+  <div class="toolbar-menu">
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item routerLink="/prueba"> Prueba 1 </button>
+    </mat-menu>
+  </div>
+  <!-- END MENU -->
+
+  <div class="main-title">
+    <h1>
+      <a routerLink="/"> {{title}} </a>
+    </h1>
+  </div>
+
+
+</mat-toolbar>

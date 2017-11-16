@@ -1,0 +1,55 @@
+<mat-grid-list [cols]=cols [rowHeight]=rowHeight>
+  <mat-grid-tile *ngFor="let tile of tiles">
+    <mat-card>
+      <div *ngIf="tile.content; else loading">
+
+        <mat-card-header>
+          <mat-card-title>
+            {{ tile.title }}
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          {{ tile.content }}
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button mat-icon-button color="warn">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-mini-fab [matMenuTriggerFor]="share">
+            <mat-icon>share</mat-icon>
+          </button>
+
+          <mat-menu #share="matMenu">
+            <div mat-menu-item>
+              <button mat-icon-button>
+                <i class="fa fa-facebook fa-3" aria-hidden="true"></i>
+                Comparte
+              </button>
+            </div>
+            <div mat-menu-item>
+              <button mat-icon-button fa-3>
+                <i class="fa fa-google" aria-hidden="true"></i>
+                Comparte
+              </button>
+            </div>
+            <div mat-menu-item>
+              <button mat-icon-button fa-3>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                Comparte
+              </button>
+            </div>
+          </mat-menu>
+
+        </mat-card-actions>
+      </div>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<!-- TEMPLATES -->
+
+<ng-template #loading>
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+</ng-template>
