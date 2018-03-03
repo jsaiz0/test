@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpModule  } from '@angular/http';
+import { HttpClientModule  } from '@angular/common/http';
 
 // Material
 import { MaterialModule } from './material/material.module';
@@ -25,7 +25,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     routing,
     MaterialModule
   ],
-  providers: [appRoutesProviders, HttpModule],
+  providers: [appRoutesProviders, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
