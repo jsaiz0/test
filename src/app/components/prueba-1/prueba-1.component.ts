@@ -28,6 +28,11 @@ export class Prueba1Component implements OnInit {
       { },
       { title: 'lorem ipsum', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
     ];
+
+    this.conectApi();
   }
 
+  conectApi() {
+    return;
+  }
 }
